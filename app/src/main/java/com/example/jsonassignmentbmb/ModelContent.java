@@ -37,16 +37,16 @@ public class ModelContent
                         try
                         {
                             JSONObject object = response.getJSONObject("record");
-                            JSONArray jsonArray = object.getJSONArray("gameCompanies");
+                            JSONArray jsonArray = object.getJSONArray("Game Engines");
                             MODELS.clear();
                             MODELS_MAP.clear();
                             for (int i = 0; i < jsonArray.length(); i++)
                             {
-                                JSONObject gameCompany = jsonArray.getJSONObject(i);
-                                String name = gameCompany.getString("name");
-                                Integer year = gameCompany.getInt("year");
-                                String recentConsole = gameCompany.getString("recentConsole");
-                                Model model = new Model(name, year, recentConsole);
+                                JSONObject gameEngine = jsonArray.getJSONObject(i);
+                                String name = gameEngine.getString("name");
+                                Integer rating = gameEngine.getInt("rating");
+                                String description = gameEngine.getString("description");
+                                Model model = new Model(name, rating, description);
                                 MODELS.add(model);
                                 MODELS_MAP.put(name, model);
                             }

@@ -4,22 +4,22 @@ import com.google.gson.annotations.SerializedName;
 
 public class Model
 {
-    @SerializedName("name") private String companyName;
-    @SerializedName("year") private Integer releaseYear;
-    @SerializedName("recentConsole") private String recentConsole;
+    @SerializedName("name") private String engineName;
+    @SerializedName("rating") private Integer rating;
+    @SerializedName("description") private String description;
 
-    public Model(final String name, final Integer year, final String latestConsole)
+    public Model(final String name, final Integer rating, final String description)
     {
-        this.companyName = name;
-        this.releaseYear = year;
-        this.recentConsole = latestConsole;
+        this.engineName = name;
+        this.rating = rating;
+        this.description = description;
     }
 
-    public String getName() {return companyName;}
-    public Integer getYear() {return releaseYear;}
-    public String getRecentConsole() {return recentConsole;}
+    public String getName() {return engineName;}
+    public Integer getRating() {return rating;}
+    public String getDescription() {return description;}
 
-    public void setName(final String name) {this.companyName = name;}
-    public void setYear(final Integer year) {this.releaseYear = year;}
-    public void setRecentConsole(final String recentConsole) {this.recentConsole = recentConsole;}
+    public void setName(final String name) {this.engineName = name;}
+    public void setRating(final Integer year) {this.rating = year;}
+    public void setDescription(final String recentConsole) {this.description = recentConsole;}
 }
